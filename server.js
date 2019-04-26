@@ -7,7 +7,7 @@ let bodyParser = require('body-parser');
 let recipe = require('./routes/recipe');
 
 app.get('/', function(req, res, next) {
-    res.send('hello worlds')
+    res.send('hello and welcome to alyssa and peters super ultimate recipes backend')
 })
 
 app.use(express.static('public'))
