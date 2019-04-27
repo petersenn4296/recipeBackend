@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments().notNullable()
         table.string('url').defaultTo('')
         table.string('name').defaultTo('')
+        table.string('category').defaultTo('')
         table.specificType('ingredients', 'text ARRAY');
         table.specificType('instructions', 'text ARRAY');
         table.timestamps(true, true)
