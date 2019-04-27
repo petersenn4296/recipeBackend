@@ -8,7 +8,12 @@ function getOne(id) {
     return knex('recipe').where('id', id)
 }
 
+function getByCategory(category) {
+  return knex('recipe').select('*').where('category', category)
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    getByCategory
 }

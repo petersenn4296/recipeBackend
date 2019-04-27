@@ -14,7 +14,15 @@ function getOne(req, res, next) {
     })
 }
 
+function getByCategory(req, res, next) {
+    model.getByCategory(req.params.category)
+    .then(data => {
+        res.json(data)
+    })
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    getByCategory
 }
