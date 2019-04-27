@@ -1,4 +1,5 @@
 let express = require('express');
+var cors = require('cors')
 let app = express();
 let port = process.env.PORT || 3000;
 let knex = require('./knex');
