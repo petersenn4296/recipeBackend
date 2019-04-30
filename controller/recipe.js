@@ -21,8 +21,16 @@ function getByCategory(req, res, next) {
     })
 }
 
+function createRecipe(req, res, next) {
+    model.createRecipe(req.body.url, req.body.name, req.body.category, req.body.ingredients, req.body.instructions)
+    .then(data => {
+        res.json(data)
+    })
+}
+
 module.exports = {
     getAll,
     getOne,
-    getByCategory
+    getByCategory,
+    createRecipe
 }
