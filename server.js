@@ -6,6 +6,7 @@ let knex = require('./knex');
 let bodyParser = require('body-parser');
 
 let recipe = require('./routes/recipe');
+let category = require('./routes/category')
 
 // var whitelist = ['http://localhost:3000', 'https://the-recipes-frontend.herokuapp.com']
 // var corsOptions = {
@@ -34,6 +35,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 app.use('/recipe', recipe)
+app.use('/category', category)
 
 app.listen(port, function(){
     console.log(`listening on port ${port}`)
