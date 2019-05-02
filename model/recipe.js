@@ -8,16 +8,16 @@ function getOne(id) {
     return knex('recipe').where('id', id)
 }
 
-function getByCategory(category) {
-  return knex('recipe').select('*').where('category', category)
+function getByCategory(category_id) {
+  return knex('recipe').select('*').where('category_id', category_id)
 }
 
-function createRecipe(url, name, category, ingredients, instructions) {
+function createRecipe(url, name, category_id, ingredients, instructions) {
     return knex('recipe')
             .insert({
                 "url": url,
                 "name": name,
-                "category": category,
+                "category_id": category_id,
                 "ingredients": ingredients,
                 "instructions": instructions
             })

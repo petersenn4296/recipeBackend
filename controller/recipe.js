@@ -15,14 +15,14 @@ function getOne(req, res, next) {
 }
 
 function getByCategory(req, res, next) {
-    model.getByCategory(req.params.category)
+    model.getByCategory(req.params.category_id)
     .then(data => {
         res.json(data)
     })
 }
 
 function createRecipe(req, res, next) {
-    model.createRecipe(req.body.url, req.body.name, req.body.category, req.body.ingredients, req.body.instructions)
+    model.createRecipe(req.body.url, req.body.name, req.body.category_id, req.body.ingredients, req.body.instructions)
     .then(data => {
         res.json(data)
     })
